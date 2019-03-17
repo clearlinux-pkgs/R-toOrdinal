@@ -4,12 +4,14 @@
 #
 Name     : R-toOrdinal
 Version  : 1.1.0.0
-Release  : 5
+Release  : 6
 URL      : https://cran.r-project.org/src/contrib/toOrdinal_1.1-0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/toOrdinal_1.1-0.0.tar.gz
 Summary  : Cardinal to Ordinal Number & Date Conversion
 Group    : Development/Tools
 License  : GPL-3.0
+Requires: R-assertthat
+BuildRequires : R-assertthat
 BuildRequires : buildreq-R
 
 %description
@@ -23,10 +25,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551070985
+export SOURCE_DATE_EPOCH=1552802088
 
 %install
-export SOURCE_DATE_EPOCH=1551070985
+export SOURCE_DATE_EPOCH=1552802088
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -62,8 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library toOrdinal|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  toOrdinal || :
 
 
 %files
@@ -94,3 +95,8 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/toOrdinal/help/toOrdinal.rdx
 /usr/lib64/R/library/toOrdinal/html/00Index.html
 /usr/lib64/R/library/toOrdinal/html/R.css
+/usr/lib64/R/library/toOrdinal/tests/testthat.R
+/usr/lib64/R/library/toOrdinal/tests/testthat/test_toOrdinalDate_english.R
+/usr/lib64/R/library/toOrdinal/tests/testthat/test_toOrdinal_english.R
+/usr/lib64/R/library/toOrdinal/tests/testthat/test_toOrdinal_german.R
+/usr/lib64/R/library/toOrdinal/tests/testthat/test_toOrdinal_swedish.R
