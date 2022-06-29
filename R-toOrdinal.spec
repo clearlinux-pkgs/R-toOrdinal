@@ -4,7 +4,7 @@
 #
 Name     : R-toOrdinal
 Version  : 1.3.0.0
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/toOrdinal_1.3-0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/toOrdinal_1.3-0.0.tar.gz
 Summary  : Cardinal to Ordinal Number & Date Conversion
